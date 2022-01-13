@@ -20,5 +20,14 @@ public class RegexApp {
             String result = matcher.group();
             System.out.println(result);
         }
+
+        Pattern pattern1 = Pattern.compile("rifqi", Pattern.CASE_INSENSITIVE);
+        Matcher matcher1 = pattern1.matcher(name);
+        boolean matchFound = matcher1.find();
+        if (matchFound) {
+            System.out.println("Kata yang dicari ditemukan");
+        } else {
+            System.out.println("Kata yang dicari tidak ditemukan!!!");
+        }
     }
 }
